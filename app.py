@@ -3,8 +3,8 @@
 import sys
 import nibabel as nib
 
-# Giriş dosyasını yükleyip başlık (header) bilgisini output.txt'ye yaz
-img = nib.load(sys.argv[1])
-with open("output.txt", "w") as f:
-    f.write(str(img.header))
-    
+#just dump input image header to output.txt
+img=nib.load(sys.argv[1])
+f=open("output.txt", "w")
+f.write(str(img.header))
+f.close()
